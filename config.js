@@ -17,7 +17,21 @@ setInterval(() => {
 }, 5000);
 
 // Script para validação do formulário
-const envio = document.getElementById('btn');
-envio.addEventListener('click', () => {
-    alert('Mensagem enviada com sucesso!');
-});
+    const envio = document.getElementById('btn');
+
+    envio.addEventListener('click', (enviar) => {
+        enviar.preventDefault();
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        if (nome === "" || email === "" || mensagem === "") {
+        alert("Por favor, preencha todos os campos.");
+        return;
+        }
+        else {
+            alert('Mensagem enviada com sucesso!');
+            return;
+        }
+        
+    });
