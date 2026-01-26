@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.C.W</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Condiment&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+    <script src="config.js" defer></script>
+    
+</head>
+<body>
+    <!-- Div Superior (Home) -->
+    <div class="home">
+        <header>
+            <!-- Logo -->
+            <img class="logo" src="img/logo3D.png" alt="logo">
+            <!-- Titulo da pagina -->
+            <h1>Agencia Criativa Web</h1>
+            <!-- Menu Superior-->
+            <button class="menuIMG" aria-label="Abrir menu">
+                <img src="img/icons8-cardápio-48.png" alt="">
+            </button>
+            <nav class="menuSuperior" id="MS">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <!-- Conteudo principal / Sobre Nós -->
+        <main class="conteudo" id="conteudo">
+
+            <h2>Seja Bem Vindo a A.C.W !</h2>
+
+            <p class="p1">Nossa empresa tem como principal foco o desenvolvimento Web através do uso de HTML5, CSS3 e JavaScript.</p>
+
+            <p class="p2">Além disso, oferecemos serviços de Marketing Digital e Design Gráfico para potencializar a presença online dos nossos clientes.</p>
+
+            <img class="mobile" src="img/fundo-main.JPEG" alt="imagem sobre nós">
+
+            <p class="p3">Nosso time é composto por profissionais, prontos para transformar suas ideias em realidade.</p>
+
+            <p class="p4">Conte conosco para levar seu negócio ao próximo nível!</p>
+
+        </main>
+        <!-- Menu de Serviços Oferecidos -->
+        <section>
+            <nav class="menuServicos">
+            <ul class="servicos">
+                <li><a  href="">Desenvolvimento Web</a></li>
+
+                <li><a href="">Marketing Digital</a></li>
+
+                <li><a href="" >Design Gráfico</a></li>
+            </nav>
+        </section>
+    </div>
+
+    <!-- Aside (Depoimentos) -->
+    <aside class="setDepoimentos">
+        <h2>Depoimentos</h2>
+        <div class="depoimentos">
+            <img src="img/depoimento1-1.JPEG" class="ativo" alt="dep1">
+            <img src="img/depoimento2.JPEG" alt="dep2">
+            <img src="img/depoimento3.JPEG" alt="dep3">
+        </div>
+    </aside>
+
+    <p class="cliente"> Seja você também um de nossos clientes de sucesso!!</p>
+        
+    <!-- Div Inferior 2 (Contato) -->
+    <div>
+        <section class="contato">
+            <h2>Contato:</h2>
+            <form action="" class="formulario">
+                <input type="text" placeholder="Nome" required>
+                
+                <input type="email" placeholder="E-mail" required>
+
+                <textarea name="mensagem" placeholder="Digite sua mensagem" maxlength="300" required></textarea>
+
+                <button id="btn" type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>© 2026 A.C.W - Agencia Criativa Web. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
