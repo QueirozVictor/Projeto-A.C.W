@@ -110,7 +110,7 @@
 }
 
 /*--- Menu Superior após ser ativo por Js ---*/
-.upper-menu.ativo {
+.upper-menu--ativo {
     display: block;
     position: absolute;
     height: auto;
@@ -155,7 +155,7 @@
 }
 
 /*---Estilos dos paragrafos do main (BEM) ---*/
-.main__p2, .main__p3 {
+.main__paragrafo-2, .main__paragrafo-3 {
     grid-column-start: 1;
     grid-column-end: 3;
     max-width: 50vw;
@@ -167,7 +167,7 @@
     font-size: clamp(1rem, 1.8vw, 3.2rem);
     
 }
-.main__p1, .main__p4 {
+.main__paragrafo-1, .main__paragrafo-4 {
     grid-column-start: 1;
     grid-column-end: 5;
     background-color: #022b3a1d;

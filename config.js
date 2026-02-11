@@ -3,7 +3,7 @@ const toggle = document.querySelector('.menu-img');
 const menu = document.getElementById('MS');
 
 toggle.addEventListener('click', () => {
-    menu.classList.toggle('ativo');
+    menu.classList.toggle('upper-menu--ativo');
 });
 
 // Script para o slider de depoimentos
