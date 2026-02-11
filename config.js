@@ -1,5 +1,5 @@
 // Script para o menu mobile
-const toggle = document.querySelector('.menuIMG');
+const toggle = document.querySelector('.menu-img');
 const menu = document.getElementById('MS');
 
 toggle.addEventListener('click', () => {
