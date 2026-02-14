@@ -413,14 +413,7 @@
         grid-column: 3/5;
         grid-row: 1/6;
     }
-
-    .main__p1,.main__p2 {
-        grid-column-end: 3;
-        background-color: #011c2500;
-        padding: 20px;
-        font-size: clamp(1rem, 2.0vw, 2.2rem);
-    }
-    .main__p3,.main__p4 {
+    [class^="main__p"] {
         grid-column-end: 3;
         background-color: #011c2500;
         padding: 20px;
