@@ -1,0 +1,27 @@
+//Fonte
+$fonte-padrao: 'Inter', sans-serif;
+$fonte-p: 1rem;
+$fonte-m:1.5rem;
+$fonte-g: 2rem;
+$bold: 700;
+$font-response: clamp(1rem, 2vw, 3rem);
+
+//Cores
+$cor-fundo: #011117;
+$sem-fundo: #01111704;
+$cor-texto: #f7f7f7;
+$cor-texto-escuro: #011117;
+$cor-primaria: #a1cffe;
+$cor-sombra: #BFDBF7;
+$sombra: 0px 0px 5px #011117;
+$sombra-clara: 0px 0px 5px #BFDBF7;
+$cor-paragrafo: #f7f7f7;
+$overlay: #0111175f;
+
+//Espaçamentos
+$base-space: 10px;
+$borda-padrao: 5px;
+$margin-padrao: 10px;
+$alinhamento-padrao: center;
+$largura-padrao: 100%;
+$sem-margem: 0px;

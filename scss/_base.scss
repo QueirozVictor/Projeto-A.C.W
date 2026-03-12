@@ -1,0 +1,62 @@
+@use 'variaveis';
+
+//Fonte base
+@font-face {
+  font-display: swap; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/inter-v20-latin-200.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/inter-v20-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-v20-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-v20-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+//Reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+
+//body
+.geral {
+
+    background: url("../img/fundo1.JPEG") no-repeat center center fixed;
+    background-size: cover;
+    font-family: variaveis.$fonte-padrao;
+    color: variaveis.$cor-texto;
+
+    
+}
+
+.home {
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "menu menu menu menu";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    
+}

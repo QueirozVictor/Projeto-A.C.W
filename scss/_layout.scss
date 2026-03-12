@@ -1,0 +1,267 @@
+@use 'variaveis';
+@use 'mixins';
+
+
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: 1fr 5fr 1fr;
+    background-color: variaveis.$cor-fundo;
+    margin: 0;
+    position: relative;
+
+    &__logo {
+        width: 10vw;
+        @include mixins.standard-margin();
+    }
+    &__tema {
+        align-self: center;
+        font-size: clamp(1.1rem, 3.5vw, 4.2rem);
+        color: #f2f2ff;
+        text-shadow: variaveis.$cor-sombra;
+    }
+
+    @media (max-width: 400px) {
+    .header__tema {
+        font-size: variaveis.$font-response;
+    }
+}
+    @media (min-width: 600px) { 
+
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 1fr;
+
+        &__logo{
+        width: 10vw;
+        @include mixins.standard-margin(5px);
+        }
+        &__tema {
+            width: variaveis.$largura-padrao;
+            grid-column: 2/4;
+            grid-row: 1/2;
+        }
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: variaveis.$base-space;
+    min-height: 50vh;
+    padding: variaveis.$base-space;
+    grid-area: main;
+    background-color: #011117aa;
+    background-position: variaveis.$alinhamento-padrao;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: variaveis.$borda-padrao;
+    @include mixins.standard-margin(0px 5px);
+    padding: variaveis.$base-space;
+    color: variaveis.$cor-texto;
+    overflow-y: hidden;
+    font-weight: variaveis.$bold;
+    text-align: variaveis.$alinhamento-padrao;
+    align-items: variaveis.$alinhamento-padrao;
+
+    &__tema {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-align: variaveis.$alinhamento-padrao;
+        font-size: variaveis.$fonte-g;
+    }
+
+    &__paragrafo-2, &__paragrafo-3 {
+        @include mixins.centralizar();
+        grid-column-start: 1;
+        grid-column-end: 3;
+        max-width: 50vw;
+        height: 15vh;
+        background-color: variaveis.$cor-paragrafo;
+        border-radius: variaveis.$borda-padrao;
+        @include mixins.sombra(0px 0px 5px);
+        padding: variaveis.$base-space;
+        font-size: variaveis.$fonte-p;
+        color: variaveis.$cor-fundo;
+    }
+
+    &__paragrafo-1, &__paragrafo-4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background-color: variaveis.$cor-paragrafo;
+        border-radius: variaveis.$borda-padrao;
+        @include mixins.sombra(0px 0px 5px);
+        padding: variaveis.$base-space;
+        color: variaveis.$cor-fundo;
+        font-size: variaveis.$fonte-p;
+    }
+
+    
+
+
+    @media (max-width: 400px) {
+        [class^="main__p"] {
+        font-size: variaveis.$font-response;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        max-width: variaveis.$largura-padrao;
+        margin-top: 0px;
+    }
+    }
+        &__texto-desk {
+            display: none;
+        }
+    &__img {
+        justify-self: variaveis.$alinhamento-padrao;
+        grid-row: 3/5;
+        grid-column: 3/6;
+        width: variaveis.$largura-padrao;
+        border-radius: variaveis.$borda-padrao;
+        box-shadow: variaveis.$sombra;
+
+        @media (max-width: 400px) {
+            grid-column: 1/5;
+            grid-row: 6/7;
+            width: 95%;
+            margin: 0 auto;
+        }
+        
+    }
+
+    @media (min-width: 600px){
+        &__tema{
+        grid-column-end: 5;
+        border-radius: 5px;
+        padding: variaveis.$base-space;
+    }
+
+    &__img{
+        grid-column: 3/5;
+        grid-row: 2/6;
+    }
+
+    [class^="main__p"] {
+        grid-column-end: 3;
+        padding: variaveis.$base-space;
+        font-size: variaveis.$font-response;
+    }
+    }
+
+    @media (min-width: 800px){
+        background: url("../img/fundo1.JPEG") no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: variaveis.$sem-margem;
+            
+        
+        &__tema{
+            border-radius: variaveis.$borda-padrao;
+            padding: variaveis.$base-space;
+    }
+
+    &__img{ 
+        display: none;
+    }
+
+    [class^="main__paragrafo"]{
+        display: none;
+    }
+
+    &__texto-desk {
+        margin-top:40px;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+        gap:30px;
+        max-width:1100px;
+        margin-inline:auto;
+
+        &__1, &__2, &__3, &__4 {
+            display: flex;
+            background-color: variaveis.$cor-paragrafo;
+            border-radius: variaveis.$borda-padrao;
+            align-items: variaveis.$alinhamento-padrao;
+            @include mixins.sombra(0px 0px 5px);
+            padding: variaveis.$base-space*2;
+            color: variaveis.$cor-fundo;
+            font-size: variaveis.$font-response;
+            min-height: 15vh;
+
+            &:hover{
+                transform:translateY(-5px);
+            }
+        }
+    }
+    }
+
+}
+
+.servicos{
+    @media (max-width: 400px) {
+        font-size: variaveis.$font-response;
+    }
+
+    @media (min-width: 600px){
+        &__nav__link:hover {
+        background-color: variaveis.$cor-sombra;
+        text-decoration: none;
+        color: variaveis.$cor-fundo;
+        padding: variaveis.$base-space;
+        border-radius: variaveis.$borda-padrao;
+    }
+    
+    }
+
+    grid-column: 1/5;
+    margin: 0;
+    grid-area: menu;
+    background-color: variaveis.$cor-fundo;
+    height: 15vh;
+    padding: variaveis.$base-space;
+    
+
+
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: variaveis.$base-space;
+
+        &__tema{
+            color: variaveis.$cor-sombra;
+            font-size: variaveis.$fonte-m;
+            margin: variaveis.$margin-padrao;
+            padding: variaveis.$base-space;
+        }
+        &__list {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: variaveis.$borda-padrao *3;
+            cursor: pointer;
+        }
+        &__link{
+            text-decoration: none;
+            color: variaveis.$cor-texto;
+
+            &:hover {
+                background-color: variaveis.$cor-sombra;
+                color: variaveis.$cor-fundo;
+                padding: variaveis.$base-space;
+                border-radius: variaveis.$borda-padrao;
+                font-weight: variaveis.$bold;
+            }
+        }
+    }
+}
+
+.footer {
+    grid-column: 1/5;
+    background-color: rgb(0, 0, 0);
+    color: variaveis.$cor-texto;
+    text-align: variaveis.$alinhamento-padrao;
+    padding: variaveis.$base-space*2;
+}

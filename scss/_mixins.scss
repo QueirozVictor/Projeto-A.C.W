@@ -1,0 +1,21 @@
+@mixin sombra($espacamento:0px 0px 1px,$cor: #BFDBF7){
+    box-shadow:($espacamento $cor);
+}
+
+@mixin standard-margin($margin: 10px){
+    margin: $margin;
+}
+
+@mixin padding($padding: 10px){
+    padding: $padding;
+}
+
+@mixin centralizar(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin borda($borda: 1px solid #BFDBF7){
+    border: $borda;
+}
